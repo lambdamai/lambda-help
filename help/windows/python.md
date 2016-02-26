@@ -56,21 +56,23 @@
 - открыть командную строку
 - ввести в ней `pip install requests`
 
-![](pics/12.png)
+![установка библиотеки requests](pics/12.png)
 
 - ввести в ней `pip install BeautyfullSoup4`
 
-![](pics/11.png)
+![установка библиотеки BeautyfullSoup4](pics/11.png)
 
 ----------------
 
 ## Sublime
 
 - заходим на официальный сайт, скачиваем установщик
+
 ![](pics/13_0.png)
+
 - устанавливаем программу
 
-![](pics/13.png)
+![установка sublime text](pics/13.png)
 
 **Всё!**
 Но для немного более комфортной работы с пайтоном можно выполнить еще несколько ходов. Установим *Package Control*, дополнение, упрощающее установку разнообразных плагинов/дополнений/тем к редактору.
@@ -80,17 +82,17 @@
 import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
-![](pics/14.png)
+![установка package control](pics/14.png)
 
 и перезагружаем редактор
 
 - нажимаем `Ctrl + Shift + P`, попадаем в коммандное меню. вводим в нем `ppa`, выбираем пункт меню *Package Control: Install Package*
 
-![](pics/15.png)
+![командное меню](pics/15.png)
 
 - вводим имя нужного нам дополнения, для начала установим модуль автодополнения синтаксиса `jedi`
 
-![](pics/16.png)
+![установка модуля jedi](pics/16.png)
 
 **Успех!**
 
