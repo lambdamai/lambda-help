@@ -19,6 +19,9 @@
 - Совместно посещаем тематические конференции и митапы.
 
 ## Начало работы
-- [Установка Python 3.5](help/python.md)
-- [Установка Sublime Text 3](help/sublime.md)
-- [Установка `pip` и других библиотек](help/pip-libs.mds)
+### Windows
+- [Установка Python 3.5](help/windows/python.md)
+- [Установка Sublime Text 3](help/windows/sublime.md)
+- [Установка `pip` и других библиотек](help/windoiws/pip-libs.mds)
+
+### Linux
