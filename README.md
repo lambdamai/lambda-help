@@ -21,6 +21,7 @@
 ## Начало работы
 ### Windows
 - [X] [Установка Python 3.5, `pip`, Sublime Text 3](help/windows/python.md)
+
 ### Linux
 - [ ] [Установка Python 3.5, `pip`, Sublime Text 3]()
 
