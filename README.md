@@ -20,8 +20,10 @@
 
 ## Начало работы
 ### Windows
-- [Установка Python 3.5](help/windows/python.md)
-- [Установка Sublime Text 3](help/windows/sublime.md)
-- [Установка `pip` и других библиотек](help/windoiws/pip-libs.mds)
-
+- [X] [Установка Python 3.5, `pip`, Sublime Text 3](help/windows/python.md)
 ### Linux
+- [ ] [Установка Python 3.5, `pip`, Sublime Text 3]()
+
+## Полезные ресурсы
+- [ ] [Документация]()
+- [ ] [Книжки]()
