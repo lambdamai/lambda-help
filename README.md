@@ -19,11 +19,8 @@
 - Совместно посещаем тематические конференции и митапы.
 
 ## Начало работы
-### Windows
-- [X] [Установка Python 3.5, `pip`, Sublime Text 3](help/windows/python.md)
-
-### Linux
-- [ ] [Установка Python 3.5, `pip`, Sublime Text 3]()
+- [X] [Установка Python 3.5, `pip`, Sublime Text 3 в Windows](help/python.md)
+- [X] [Регистрация на Github, настройка `git` в Windows](help/git.md)
 
 ## Полезные ресурсы
 - [ ] [Документация]()
