@@ -112,6 +112,16 @@
 ## IDE
 
 ### [Thonny](http://thonny.cs.ut.ee/)
+Thonny is a new Python IDE meant for teaching/learning programming.
+
+*Преимущества*:
+- Statement stepping without breakpoints
+- Live variables during debugging
+- Stepping through evaluation of the expressions (expressions get replaced by their values)
+- Separate windows for executing function calls (helps explaining local variables and call stack; good understanding of how function calls work is especially important for understanding recursion)
+- Variables can be explained either by using simplified model (name -> value) or by using more realistic model (name -> address/id -> value)
+
+![thonny](https://bytebucket.org/plas/thonny/raw/d336d953da36568c0ff38b4898a4b4a888159f0d/screenshot.png)
 
 ### [Spyder](https://github.com/spyder-ide)
 Отличная IDE для ведения проектов малой и средней сложности. Благодаря встроенному анализатору переменных удобна для задач машинного обучения, дата майнинга, а также обучения основам программирования. Полный автокомплит, анализ кода, подсветка ошибок, pep8.
@@ -155,11 +165,30 @@
 
 ### [Eric IDE](http://eric-ide.python-projects.org/)
 
+![eric ide](http://eric-ide.python-projects.org/images/eric5-screen-01.png)
+
 ### [Rodeo](http://blog.yhat.com/posts/introducing-rodeo.html)
+
+![rodeo](https://camo.githubusercontent.com/6951f81624599db71c34138cb73ed42968597b48/687474703a2f2f626c6f672e7968617468712e636f6d2f7374617469632f696d672f726f64656f2d6f766572766965772e706e67)
 
 ### Jupyter Notebook
 
-### Canopy
+### [Canopy](https://www.enthought.com/products/canopy/)
+рекомендуют в курсе MIT 6.00.1.x (Introduction to Computer Science and Programming Using Python);
+
+*Преимущества*:
+- наглядная визуализация объектов, создаваемых скриптом
+- поддержка iPython консоли
+- дебаггер
+- анализ кода, автокомплит
+
+*Недостатки*:
+
+*Платформа*: Windows, Linux, Mac
+
+*Цена*: бесплатно
+
+![canopy](https://static.enthought.com/etw/img/interactive_graphical_python_code_debugger_in_enthought_canopy.png?b6809cb)
 
 ## Мобильные платформы
 
