@@ -37,6 +37,8 @@
 
 *Цена*: бесплатно
 
+![](ide/brackets.md)
+
 ### [Sublime Text](https://sublimetext.com)
 Золотая середина по простоте работы, функциональности и поддержки Python. Имеет встроенную консоль, в которой можно выполнять простые команды. С помощью дополнений сюда прикручиваются автодополнение кода, проверка качетсва кода, работа с Git и т.д.
 
@@ -113,7 +115,11 @@
 
 ### [Spyder](https://github.com/spyder-ide)
 
+![spyder](ide/spyder.png)
+
 ### [Jetbrains PyCharm](http://www.jetbrains.com/pycharm/)
+
+![pycharm](ide/pycharm.png)
 
 ### [Eric IDE](http://eric-ide.python-projects.org/)
 
