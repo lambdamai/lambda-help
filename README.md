@@ -22,6 +22,9 @@
 - [X] [Установка Python 3.5, `pip`, Sublime Text 3 в Windows](help/python.md)
 - [X] [Регистрация на Github, настройка `git` в Windows](help/git.md)
 
+## Лекции
+- [X] [03.03.2016](lectures/2016-03-03.ipynb)
+
 ## Полезные ресурсы
 - [ ] [Документация]()
 - [ ] [Книжки]()
