@@ -49,7 +49,7 @@ while True:
         print("Incorrect integer")
 ```
 
-    Input a number:Hello, world!
+    Input a number:fourty two
     Incorrect integer
     Input a number:42
     
@@ -70,7 +70,7 @@ except (RuntimeError, TypeError, NameError, ValueError):
     print("Caught an exception")
 ```
 
-    Input another number:memes
+    Input another number:not a number
     Caught an exception
     
 
@@ -88,6 +88,8 @@ while True:
 
     Input a number:not a number
     Incorrect integer
+    Input a number:42?
+    Incorrect integer
     Input a number:42
     
 
@@ -104,7 +106,7 @@ while True:
         print("Caught exception:",sys.exc_info()[0])
 ```
 
-    Input a number:Not a number
+    Input a number:wow, such an exception
     Caught exception: <class 'ValueError'>
     Input a number:34
     
@@ -121,9 +123,9 @@ while True:
         print("Incorrect integer", e)
 ```
 
-    Input a number:definitely not a number
-    Incorrect integer invalid literal for int() with base 10: 'definitely not a number'
-    Input a number:44
+    Input a number:much integer
+    Incorrect integer invalid literal for int() with base 10: 'much integer'
+    Input a number:88
     
 
 Исключения могут охватывать несколько уровней.
@@ -200,14 +202,6 @@ print(divide(1,2))
 print(divide(1,0))
 ```
 
-    Result  0.5
-    finally
-    None
-    Zero division!
-    finally
-    None
-    
-
 Можно создавать собственные исключения - для этого нужно объявить новый класс, наследующийся от `Exception`.
 
 
@@ -237,6 +231,10 @@ import test_module
 print('Type of object: %s'%(str(type(test_module))) )
 ```
 
+    test module has been imported
+    Type of object: <class 'module'>
+    
+
 Теперь `test_module` это объект типа `module`, то есть модуль Python.
 
 Атрибуты модуля - переменные, функции и классы, объявленые в файле, доступны нам как атрибуты класса
@@ -251,6 +249,15 @@ print('X equals: %s'%(str(test_module.x)))
 print('Y equals: %s'%(str(test_module.y)))
 print('Class atr: %s'%(str(test_module.MyClass.test_atr)))
 ```
+
+    
+    Accesing module attributes:
+    Func 1
+    Func 2
+    X equals: 1
+    Y equals: 2
+    Class atr: Lambda
+    
 
 Второй вариант импорта — взятие непосредственно имени без имени модуля.
 
@@ -268,6 +275,14 @@ print("X equals:",x)
 print("Module x equals", test_module.x)
 ```
 
+    
+    Accesing attributes with a different import:
+    Func 1
+    Func 2
+    X equals: 10
+    Module x equals 1
+    
+
 В данном случае `x` — это локальная переменная, в то время как переменные `x` в модуле не меняются.
 
 Можно задать alias ипортируемому имени для упрощения или избежания конфликта имен
@@ -282,6 +297,12 @@ from test_module import func1 as f1
 f1()
 ```
 
+    
+    Importing with alias
+    Module x equals 1
+    Func 1
+    
+
 Для выяснения имен, определенных в модуле, можно использовать встроенную функцию `dir()`. Она возвращает отсортированный список строк.
 
 У модулей есть различные атрибуты, например `__doc__` выведет документацию к модулю. В нашем случае это будет многострочный комментарий в начале файла.
@@ -293,6 +314,11 @@ print(dir(test_module))
 with open('out.txt', "w", encoding='utf-8') as f:
     f.write(test_module.__doc__)
 ```
+
+    
+    Using dir:
+    ['MyClass', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'func1', 'func2', 'x', 'y']
+    
 
 **Пакеты** (`packages`)
 
@@ -327,6 +353,12 @@ print('\nImporting from package')
 print("Module x equals", ptm.x)
 ```
 
+    test module has been imported
+    
+    Importing from package
+    Module x equals 100
+    
+
 Или так
 
 
@@ -336,6 +368,11 @@ print('\nImporting from package 2')
 print("Module x equals", ptm.x)
 ```
 
+    
+    Importing from package 2
+    Module x equals 100
+    
+
 Или так
 
 
@@ -344,6 +381,11 @@ from test_package import *
 print('\nImporting from package 3')
 print("Module z equals", package_test_module.z)
 ```
+
+    
+    Importing from package 3
+    Module z equals 300
+    
 
 Что означает импорт всех имен из пакета.
 
