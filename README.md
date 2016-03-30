@@ -27,6 +27,11 @@
 - [X] [17.03.2016 - ООП в Python](lectures/2016-03-17/2016-03-17.ipynb) ([py](lectures/2016-03-17/2016-03-17.py))
 - [X] [22.03.2016 - Исключения и модули](lectures/2016-03-22/)
 
+## Практические занятия
+- [Парсер](https://github.com/lambda-frela/parser)
+- [Консольный 2048 с "ИИ"](https://github.com/lambda-frela/term2048_ai)
+- [Упражнения по работе с VK API](https://github.com/lambda-frela/vk_api_exercise)
+
 ## Полезные ресурсы
 - [X] [Книги для изучения](help/books.md)
 - [ ] [Документация]()
