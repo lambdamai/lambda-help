@@ -1,5 +1,6 @@
 
 # Django
+    Вводная лекция: Теория, создание проекта, быстрый обзор views, routing, models, templates.
 
 ## Теория
 
