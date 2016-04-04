@@ -21,11 +21,15 @@
 ## Начало работы
 - [X] [Установка Python 3.5, `pip`, Sublime Text 3 в Windows](help/python.md)
 - [X] [Регистрация на Github, настройка `git` в Windows](help/git.md)
+- [X] [Установка Django](help/django.md)
 
 ## Лекции
-- [X] [03.03.2016 - Регулярные выражения в Python](lectures/2016-03-03/2016-03-03.ipynb) ([py](lectures/2016-03-03/2016-03-03.py))
-- [X] [17.03.2016 - ООП в Python](lectures/2016-03-17/2016-03-17.ipynb) ([py](lectures/2016-03-17/2016-03-17.py))
+- [X] [03.03.2016 - Регулярные выражения в Python](lectures/2016-03-03/) ([py](lectures/2016-03-03/2016-03-03.py))
+- [X] [17.03.2016 - ООП в Python](lectures/2016-03-17/
+) ([py](lectures/2016-03-17/2016-03-17.py))
 - [X] [22.03.2016 - Исключения и модули](lectures/2016-03-22/)
+- [X] [31.03.2016 - Машинное обучение. Часть 1](lectures/2016-03-31/)
+- [X] [05.04.2016 - Django. Часть 1.](lectures/2016-04-05)
 
 ## Практические занятия
 - [Парсер](https://github.com/lambda-frela/parser)
