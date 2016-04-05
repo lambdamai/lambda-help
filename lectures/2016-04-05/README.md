@@ -153,6 +153,7 @@ def index(request):
                     <p>{{ community.contacts }}</p>
                 <br/>
             </div>
+            {% endfor %}
 
         </div>
     </div>
