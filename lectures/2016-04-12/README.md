@@ -1,6 +1,5 @@
 
-__Attention!__ Чтобы следить за ходом лекции нужно работать с данной версией репозитория:
-https://github.com/lambda-frela/mai-student-life/tree/175f928d6e9ff72501cc6b1d2b1d38c9f986d426
+__Attention!__ Чтобы следить за ходом лекции нужно работать с данной версией репозитория: 175f928d6e9ff72501cc6b1d2b1d38c9f986d426
 
 # Шаблоны
 
@@ -189,7 +188,7 @@ Curated list of MAI student communities.
 Заметьте конструкцию `{% include "community_detail.html" with com=community %}`.
 В данном случае `with com=community` означает "передать в шаблон пемеренную community и записать её значение в локальную переменную _com_". Однако если мы заменим com на community в шаблоне __community_card.html__ нам не потребуется указывать `with`: Джанго атвоматически передаст значение переменной _community_ потому что она имеет одинаковое имя в обоих шаблонах. 
 
-Аналогино создадим шаблон pagination.html 
+Аналогино создадим шаблон __pagination.html__
 ```html
 {% if paginated_list.paginator.num_pages > 1 %}
     <div class="pagination">
