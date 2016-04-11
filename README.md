@@ -33,9 +33,12 @@
 - [X] [12.04.2016 - Django. Часть 2.](lectures/2016-04-12)
 
 ## Практические занятия
+- [Сайт, содержащий раличные сообщества в ВК](https://github.com/lambda-frela/mai-student-life)
 - [Парсер](https://github.com/lambda-frela/parser)
-- [Консольный 2048 с "ИИ"](https://github.com/lambda-frela/term2048_ai)
+- [Консольный 2048 с ИИ](https://github.com/lambda-frela/term2048_ai)
 - [Упражнения по работе с VK API](https://github.com/lambda-frela/vk_api_exercise)
+- [Машинное обучение](https://github.com/lambda-frela/data_analysis)
+- [Ханойская башня с ИИ](https://github.com/lambda-frela/Tower_of_Hanoi_in_Term_AI)
 
 ## Полезные ресурсы
 - [X] [Книги для изучения](help/books.md)
