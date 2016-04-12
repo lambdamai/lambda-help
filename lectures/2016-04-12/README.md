@@ -160,7 +160,7 @@ Curated list of MAI student communities.
 {% block content %}
     <div class="communities-list">
         {% for community in community_list %}
-            {% include "community_detail.html" with com=community %}    
+            {% include "community_card.html" with com=community %}    
         {% endfor %}
     </div>
     {% if community_list.paginator.num_pages > 1 %}
