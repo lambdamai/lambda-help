@@ -125,6 +125,7 @@ Curated list of MAI student communities.
 ```
 
 Итак, что произойдет, если _Django_ в ответ на запрос пользователя "отрисует" шаблон __community_list.html__?
+
 1. Из-за тэга _extends_ за основу будет взят указанный шаблон ("__base.html__"). 
 2. Блоки основного шаблона (_title_, _description_, _content_) буду заполнены содержимым из шаблона __community_list__.
 Например в тэг `<title>` в контейнере `<head>` будет записана строка _"MAI COMMUNITIES"_.
@@ -159,7 +160,7 @@ Curated list of MAI student communities.
 {% block content %}
     <div class="communities-list">
         {% for community in community_list %}
-            {% include "community_detail.html" with com=community %}    
+            {% include "community_card.html" with com=community %}    
         {% endfor %}
     </div>
     {% if community_list.paginator.num_pages > 1 %}
