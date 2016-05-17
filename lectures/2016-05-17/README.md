@@ -1,13 +1,17 @@
 
 # Django Social Auth
 
-Для начала, убедимся, что на компьютере находится нужная версия репозитория [mai-student-life](https://github.com/lambda-frela/mai-student-life/tree/0479dedcb4e9cda04734229ae895ca8a6a1257cf)
+Для начала, убедимся, что на компьютере находится нужная версия репозитория [mai-student-life](https://github.com/lambda-frela/mai-student-life/tree/0479dedcb4e9cda04734229ae895ca8a6a1257cf) 
 
 1. заходим в папку, в которой хранятся репозитории, открываем в ней командную строку
 2. `git clone https://github.com/lambda-frela/mai-student-life.git`
 3. `cd mai-student-life`
 4. `git checkout social`
 5. `git checkout 0479dedcb4e9cda04734229ae895ca8a6a1257cf`
+6. `cd project`
+7. `python manage.py makemigrations`
+8. `python manage.py migrate`
+9. `python manage.py runserver`
 
 Устанавливаем библиотеку **python-social-auth** через `pip`
 ```
@@ -54,7 +58,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 ```
 
-3\. Сайты, через которые будем авторизовываться. Полный список можно посомтреть [здесь](https://github.com/omab/python-social-auth/blob/master/examples/django_example/example/settings.py#L120). Мы будем авторизовываться через Github:
+3\. Сайты, через которые будем авторизовываться. Полный список можно посомтреть [здесь](http://django-social-auth.readthedocs.io/en/latest/backends/index.html). Мы будем авторизовываться через Github:
 
 ```python
 AUTHENTICATION_BACKENDS = (
