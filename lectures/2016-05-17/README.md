@@ -58,7 +58,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 ```
 
-3\. Сайты, через которые будем авторизовываться. Полный список можно посомтреть [здесь](http://django-social-auth.readthedocs.io/en/latest/backends/index.html). Мы будем авторизовываться через Github:
+3\. Сайты, через которые будем авторизовываться. Полный список можно посомтреть [здесь](http://psa.matiasaguirre.net/docs/backends/index.html#supported-backends). Мы будем авторизовываться через Github:
 
 ```python
 AUTHENTICATION_BACKENDS = (
