@@ -33,6 +33,7 @@ __Что мы делаем?__
 - [X] [05.04.2016 - Django. Часть 1.](lectures/2016-04-05)
 - [X] [12.04.2016 - Django. Часть 2.](lectures/2016-04-12)
 - [X] [12.05.2016 - Django REST API](lectures/2016-05-12)
+- [X] [17.05.2016 - Python Social Auth](lectures/2016-05-17)
 
 ## Практические занятия
 - [Сайт, содержащий раличные сообщества в ВК](https://github.com/lambda-frela/mai-student-life)

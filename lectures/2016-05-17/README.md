@@ -155,6 +155,7 @@ LOGIN_REDIRECT_URL = '/'
 ![](auth_2.png)
 
 Заполняем форму по образцу:
+
 1. **Application name**: maistudentlife _(может быть любое)_
 2. **Homepage URL**: `http://maistudentlife.ru/` _(желательно, чтобы адрес был с доменом .com, .net, .org, .ru, etc.)_
 3. **Authorization callback URL**: `http://maistudentlife.ru:8000/` _(так как наш сайт нигде не зарегестрирован, а название прикручено через `hosts`, надо указать порт, к которому будет обращаться Github для возврата одобрения авторизации)_
