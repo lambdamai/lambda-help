@@ -23,3 +23,13 @@ print(django.get_version())
 ```
 1.9
 ```
+
+Также нам понадобятся следующие библиотеки:
+1. bootstrap 3
+2. rest framework
+3. social auth
+
+
+```python
+pip install django-bootstrap3 djangorestframework python-social-auth
+```
