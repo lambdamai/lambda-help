@@ -11,15 +11,20 @@ Cleaning up...
 ```
 
 Для того, чтобы проверить, установился ли Django, откроем в командной строке Python:
+
 ```
 > python
 ```
+
 и выполним следующие команды:
+
 ```python
 import django
 print(django.get_version())
 ```
+
 результатом этих действий должна стать строчка, содержащая версию установленного пакета:
+
 ```
 1.9
 ```
@@ -28,7 +33,6 @@ print(django.get_version())
 1. bootstrap 3
 2. rest framework
 3. social auth
-
 
 ```python
 pip install django-bootstrap3 djangorestframework python-social-auth
