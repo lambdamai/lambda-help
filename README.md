@@ -1,5 +1,5 @@
 # Лямбда ФРЭЛА
-
+[![Slack Status](https://lambdafrelaslack.herokuapp.com/badge.svg)](https://lambdafrelaslack.herokuapp.com/)
 ## Внимание! Открыта [регистрация](http://goo.gl/forms/pi3uDebyKbWWYDYt1) на участие в Лямбде 2016-2017!
 
 __Кто мы?__  
