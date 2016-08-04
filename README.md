@@ -1,6 +1,6 @@
 # Лямбда ФРЭЛА
-
 ## Внимание! Открыта [регистрация](http://goo.gl/forms/pi3uDebyKbWWYDYt1) на участие в Лямбде 2016-2017!
+[![Slack](help/pics/badge.png)](https://lambdainvite.herokuapp.com/) [![Telegram](help/pics/telegram.png)](https://telegram.me/joinchat/BdvwrQPtvpdLNKZMaa30dA)
 
 __Кто мы?__  
 Мы студенческий практикум программистов при ФРЭЛА МАИ
