@@ -21,22 +21,31 @@ __Что мы делаем?__
 - Совместно посещаем тематические конференции и митапы.
 
 ## [Собрание проектов](https://github.com/lambda-frela/lambda-help/issues/4)
-
-## Начало работы
-- [X] [Установка Python 3.5, `pip`, Sublime Text 3 в Windows](help/python.md)
-- [X] [Регистрация на Github, настройка `git` в Windows](help/git.md)
-- [X] [Установка Django](help/django.md)
+## Наша классная [вики](https://github.com/lambdafrela/lambda-help/wiki) с советами и гайдами
 
 ## Лекции
-- [X] [03.03.2016 - Регулярные выражения в Python](lectures/2016-03-03/) ([py](lectures/2016-03-03/2016-03-03.py))
-- [X] [17.03.2016 - ООП в Python](lectures/2016-03-17/
-) ([py](lectures/2016-03-17/2016-03-17.py))
-- [X] [22.03.2016 - Исключения и модули](lectures/2016-03-22/)
-- [X] [31.03.2016 - Машинное обучение. Часть 1](lectures/2016-03-31/)
-- [X] [05.04.2016 - Django. Часть 1.](lectures/2016-04-05)
-- [X] [12.04.2016 - Django. Часть 2.](lectures/2016-04-12)
-- [X] [12.05.2016 - Django REST API](lectures/2016-05-12)
-- [X] [17.05.2016 - Python Social Auth](lectures/2016-05-17)
+
+### Git
+
+- [Git. Часть 1.](lectures/2016/10-19)
+
+### Python
+
+- [Регулярные выражения в Python](lectures/2016/03-03/)
+- [ООП в Python](lectures/2016/03-17/)
+- [Исключения и модули](lectures/2016/03-22/)
+
+### Django
+
+- [Django. Часть 1.](lectures/2016/04-05)
+- [Django. Часть 2.](lectures/2016/04-12)
+- [Django REST API](lectures/2016/05-12)
+- [Django Social Auth](lectures/2016/05-17)
+
+### Machine Learning
+
+- [Машинное обучение. Часть 1](lectures/2016/03-31/)
+
 
 ## Практические занятия
 - [Сайт, содержащий раличные сообщества в ВК](https://github.com/lambda-frela/mai-student-life)
