@@ -1,5 +1,5 @@
 
-![](https://github.com/lambdafrela/lambda-help/raw/master/lectures/2016/11-01/pics/presentation.png)
+![](pics/presentation.png)
 
 # План на сегодня
 
@@ -42,6 +42,11 @@ print(a)
 
 Изменяемые наборы данных
 
+```python
+list_ = [ ]
+list_ = list()
+```
+
 
 
 ```python
@@ -81,6 +86,40 @@ x[-1]
 
 
     200
+
+
+
+## Числовая последовательность
+
+```python
+range(START, STOP, STEP)
+```
+
+
+```python
+print(list(range(10)))
+
+print(list(range(1, 10)))
+
+print(list(range(1, 10, 2)))
+```
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    [1, 3, 5, 7, 9]
+
+
+Для того, чтобы развернуть последовательность в обратную сторону, используется функция `reversed()`
+
+
+```python
+list(reversed(range(10)))
+```
+
+
+
+
+    [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
 
 
@@ -241,6 +280,11 @@ students += 'Olga'
 
 Иммутабельны, т.е. неизменяемы.
 
+```python
+tuple_ = ()
+tuple_ = tuple()
+```
+
 
 
 ```python
@@ -283,7 +327,7 @@ tuple_.append('something')
 
     AttributeError                            Traceback (most recent call last)
 
-    <ipython-input-41-f5f46c8f6eef> in <module>()
+    <ipython-input-22-f5f46c8f6eef> in <module>()
     ----> 1 tuple_.append('something')
     
 
@@ -293,7 +337,8 @@ tuple_.append('something')
 ## Словари (Dictionaries)
 
 ```python
-# общий формат
+my_dict = {}
+my_dict = dict()
 
 my_dict = {'key':'value'}
 ```
@@ -311,7 +356,7 @@ MAI.keys()
 
 
 
-    dict_keys([1, 9, 'инжэкин'])
+    dict_keys([1, 'инжэкин', 9])
 
 
 
@@ -323,7 +368,7 @@ MAI.values()
 
 
 
-    dict_values(['авиастроение', 'прикладная механика', 5])
+    dict_values(['авиастроение', 5, 'прикладная механика'])
 
 
 
@@ -401,6 +446,43 @@ for letter in 'long_word':
     d
 
 
+также можно итерироваться по числовой последовательности
+
+
+```python
+for i in range(1, 5):
+    print('{0} muffins'.format(i))
+```
+
+    1 muffins
+    2 muffins
+    3 muffins
+    4 muffins
+
+
+
+```python
+list(enumerate(MAI))
+```
+
+
+
+
+    [(0, 'я'), (1, 'мы'), (2, 'лучшие люди страны')]
+
+
+
+
+```python
+for people in enumerate(MAI):
+    print(people)
+```
+
+    (0, 'я')
+    (1, 'мы')
+    (2, 'лучшие люди страны')
+
+
 
 ```python
 for index, value in enumerate(MAI):
@@ -425,7 +507,7 @@ for key, value in MAI.keys(), MAI.values():
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-42-f328d3f97fa9> in <module>()
+    <ipython-input-34-f328d3f97fa9> in <module>()
           1 MAI = {1:'авиастроение', 'инжэкин':5, 9:'прикладная механика'}
           2 
     ----> 3 for key, value in MAI.keys(), MAI.values():
@@ -568,6 +650,10 @@ with open('lambda.txt', 'r') as text:
     
 
 
+### task
+
+Вывести из файла lambda.txt слова, начинающиеся с букв `a` или `u`
+
 
 ```python
 with open('lambda.txt', 'r') as text:
@@ -602,11 +688,6 @@ lambda variable: expression_with_variable
 
 
 ```python
-from __future__ import print_function
-```
-
-
-```python
 (lambda x: x+2)(5)
 ```
 
@@ -627,6 +708,8 @@ map(lambda variable: expression, iterable)
 
 
 ```python
+from __future__ import print_function
+
 MAI = ['я','мы','лучшие люди страны']
 
 print(list(map(lambda who: print('МАИ - это {0}'.format(who)), MAI)))
@@ -682,13 +765,37 @@ sqares(range(1, 10))
 
 
 ```python
-l = [x**2 for x in range(1, 10)]
-
-print(l)
+[x**2 for x in range(1, 10)]
 ```
+
+
+
 
     [1, 4, 9, 16, 25, 36, 49, 64, 81]
 
+
+
+### task
+
+Написать ту же функцию, но с использованием лямбда-функций
+
+
+```python
+list(map(lambda x: x**2, range(1,10)))
+```
+
+
+
+
+    [1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
+
+# ДЗ
+
+1. [Парсер](https://github.com/lambdafrela/parser/issues/11) - по ссылке достаточно подробное описание того, что надо сделать, если останутся вопросы - ждем в [#python](http://lambdafrela.slack.com/)
+2. [Coding Bat Lists 1](http://codingbat.com/python/List-1) - задания на списки попроще
+3. [Coding Bat Lists 2](http://codingbat.com/python/List-2) - задания на списки посложнее
 
 ## в следующий раз
 
