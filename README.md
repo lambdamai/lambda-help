@@ -1,9 +1,6 @@
-# Лямбда ФРЭЛА
+![](header.png)
 
 [![регистрация в чате](slack.png)](https://lambdainvite.herokuapp.com/)
-
-
-![](header.png)
 
 ## [Собрание проектов](https://github.com/lambda-frela/lambda-help/issues/4)
 ## Наша классная [вики](https://github.com/lambdafrela/lambda-help/wiki) с советами и гайдами
