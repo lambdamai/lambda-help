@@ -21,7 +21,7 @@
 
 
 ## Практические занятия
-- [Сайт, содержащий раличные сообщества в ВК](https://github.com/lambda-frela/mai-student-life)
+- [Сайт, содержащий различные сообщества в ВК](https://github.com/lambda-frela/mai-student-life)
 - [Парсер](https://github.com/lambda-frela/parser)
 - [Консольный 2048 с ИИ](https://github.com/lambda-frela/term2048_ai)
 - [Упражнения по работе с VK API](https://github.com/lambda-frela/vk_api_exercise)
