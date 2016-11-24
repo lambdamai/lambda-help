@@ -1,4 +1,6 @@
 
+![](pics/presentation.png)
+
 # ООП на Python 3
 
 ## Теория
@@ -78,11 +80,11 @@ first_user = User(login, password)
 
 
 ```python
-print("User types: %s and %s" % (first_user.user_type, second_user.user_type)) 
+print("User types: %s and %s" % (first_user.user_type, second_user.user_type))
 ```
 
     User types: Regular and Regular
-    
+
 
 Оба объекта вернут одно значение, хотя мы не вводили его в конструктор. Это поле общее для всех объектов класса.
 
@@ -94,7 +96,7 @@ print("User logins: %s and %s" % (first_user.login, second_user.login))
 ```
 
     User logins: boris and kolya
-    
+
 
 Логины разные, потому что это независимые друг от друга объекты.
 
@@ -108,7 +110,7 @@ print("Object classes: %s and %s" % (first_user.__class__, type(second_user)))
 ```
 
     Object classes: <class '__main__.User'> and <class '__main__.User'>
-    
+
 
 Ещё немного теории.
 
@@ -149,7 +151,7 @@ print("User logins with __str__: %s and %s"%(str(first_user), second_user.login)
 ```
 
     User logins with __str__: boris and kolya
-    
+
 
 2\. **Инкапсуляция**: можно скрыть ненужные внутренние подробности работы объекта от окружающего мира.  
 В нашем примере инкапсуляция может применяться при установке значения пароля и при запросе его значения. Например мы хотим зашифровать пароль при его записи и расшифровать при получении. Это скроет поле password от прямого доступа, оно будет доступно только через определенные методы.
@@ -246,11 +248,13 @@ second_user = Moderator(login, password, forum_part)
 
 
 ```python
-print("User and moderator with __str__: %s and %s"%(str(first_user), str(second_user)))
+print("User and moderator with __str__:\n %s \n %s"%(str(first_user), str(second_user)))
 ```
 
-    User and moderator with __str__: boris and kolya moderator of flood
-    
+    User and moderator with __str__:
+     boris 
+     kolya moderator of flood
+
 
 Коля получил повышение до модератора
 
@@ -260,17 +264,17 @@ print("User and moderator logins: %s and %s"%(first_user.login, second_user.logi
 ```
 
     User and moderator logins: boris and kolya
-    
+
 
 Однако у Коли так же есть поле логин, хотя мы его и не обозначали в его конструкторе явно
 
 
 ```python
-print("User and moderator user types: %s and %s"%(first_user.user_type, second_user.user_type)) 
+print("User and moderator user types: %s and %s"%(first_user.user_type, second_user.user_type))
 ```
 
     User and moderator user types: Regular and Moderator
-    
+
 
 Типы пользователей разные
 
@@ -289,7 +293,7 @@ else:
 ```
 
     Second user is a moderator!
-    
+
 
 4\. **Композиция**: объект может быть составным и включать в себя другие объекты.
 
@@ -309,9 +313,8 @@ else:
 + [Служебные методы, операторы и другое](http://pythonworld.ru/osnovy/peregruzka-operatorov.html)
 
 ## Домашнее задание       
-Измените парсер из лекций 1 и 2 так, чтобы для каждого сайта в коде парсера существовал класс имеющий:
-- метод `parse`, получающий на вход ничего и возвращающий список тайтлов книг
-- метод `find_titles()`, получающий на вход `BeautifulSoup` объект и возращающий список тайтлов
 
-Должен быть базовый класс Site, а каждый класс сайта должен от него наследоваться.
-Вся индивидуальная логика парсинга конкретного сайта должна быть в классе этого сайта, логика относящаяся ко всем сайтам - в классе Site.
+1. [GUI для парсера `#18`](https://github.com/lambdafrela/parser/issues/18)
+2. [Парсинг авторов `#19`](https://github.com/lambdafrela/parser/issues/19)
+3. [Различные источники `#20`](https://github.com/lambdafrela/parser/issues/20)
+4. [ООП-стиль `#21`](https://github.com/lambdafrela/parser/issues/21)
