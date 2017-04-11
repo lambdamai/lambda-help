@@ -7,17 +7,29 @@
 
 ## Лекции
 
+### Brand New **C**
+
+- [C. Часть 1](lectures/C/Lecture 1)
+- [C. Часть 2](lectures/C/Lecture 2)
+
 ### Git
 
-- [Git. Часть 1](lectures/2016/10-19)
-- [Git. Часть 2](lectures/2016/10-26)
+- [Git. Часть 1](lectures/git/Lecture 1)
+- [Git. Часть 2](lectures/git/Lecture 2)
 
 ### Python
 
-- [Основы Python. Часть 1](lectures/2016/11-01/)
-- [Основы Python. Часть 2](lectures/2016/11-09/)
-- [Основы Python. Часть 3](lectures/2016/11-16/)
-- [Основы Python. Часть 4](lectures/2016/03-17/)
+- [Основы Python. Часть 1](lectures/python/Lecture 1)
+- [Основы Python. Часть 2](lectures/python/Lecture 2)
+- [Основы Python. Часть 3](lectures/python/Lecture 3)
+- [Основы Python. Часть 4](lectures/python/Lecture 4)
+
+### Django нечитанный
+
+- [Django нечитанный. Часть 1](lectures/django/Lecture 1)
+- [Django нечитанный. Часть 2](lectures/django/Lecture 2)
+- [Django нечитанный. Часть 3](lectures/django/Lecture 3)
+- [Django нечитанный. Часть 4](lectures/django/Lecture 4)
 
 
 ## Практические занятия
