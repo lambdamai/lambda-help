@@ -10,6 +10,8 @@
 
 ## ветвление (branches)
 
+![](pics/branch.png)
+
 ### немного комманд
 
 - `git checkout -b develop` - создать новую ветку `develop` и переключиться на нее
@@ -45,6 +47,12 @@
 `git merge develop`
 
 ![](pics/14.png)
+
+![](pics/merge_meme.jpg)
+
+[Разница между `git merge --no-ff` и `git merge`](https://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff)
+
+![](pics/merge.png)
 
 ## заначки (stash)
 
@@ -93,9 +101,12 @@
 
 ![](pics/9.png)
 
+![](pics/success.jpg)
+
 ## git workflow
 
-![](https://habrastorage.org/storage/4bf7e68c/49e29c35/3a01bd6b/782a1be3.png)
+[](https://habrastorage.org/storage/4bf7e68c/49e29c35/3a01bd6b/782a1be3.png)
+![](pics/gitflow_1.jpg)
 
 ### главные ветки - `master` и `develop`
 
@@ -137,6 +148,18 @@ __ТЭГ__ == __Релиз__, используется для фиксирова
 
 ## tips&tricks
 
+![](pics/linus_meme.jpg)
+
+- если допущена ошибка при создании коммита (не те файлы, не тот комментарий), её можно откатить
+```bash
+git reset --soft HEAD^
+```
+
+- если нужно посмотреть содержимое другой ветки, а в текущей есть файлы, еще **не** добавленные в Index:
+```bash
+git stash save --include-untracked
+```
+
 - если отредактировано много файлов и добавлять сразу все __НЕ хочется__, то можно использовать `git add -i`
 
 ![](pics/18.png)
@@ -152,15 +175,32 @@ __ТЭГ__ == __Релиз__, используется для фиксирова
 
 ![](pics/16.png)
 
-    - `git lg` - один из альтернативных вариантов истории коммитов, более наглядный для его использования надо создать алиас:
+- `git lg` - один из альтернативных вариантов истории коммитов, более наглядный для его использования надо создать алиас:
 
-`git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"`
+```bash
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+```
 
 ![](pics/17.png)
 
+- использование GUI клиентов `¯\_(ツ)_/¯`
+
+ - [GitExtensions](https://gitextensions.github.io/)
+![](pics/gitextensions.png)
+
+- использование GUI клиентов `¯\_(ツ)_/¯`
+
+ - [GitKraken](https://www.gitkraken.com/)
+![](https://git-scm.com/images/guis/git-kraken@2x.png)
+
+- использование GUI клиентов `¯\_(ツ)_/¯`
+
+ - [SourceTree](https://gitextensions.github.io/)
+![](https://www.sourcetreeapp.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png?cdnVersion=hp)
+
 ## ДЗ
 
-создать в своем форке репозитория myfirstproject новую ветку, накуролесить в ней, слить с главной и отпраивть Pull Request
+создать в своем форке репозитория **myfirstproject** новую ветку, накуролесить в ней, слить с главной и отпраивть Pull Request
 
 ## всякий референс
 
@@ -168,6 +208,7 @@ Git
 
 - [Git Cheat Sheet](https://www.alexkras.com/getting-started-with-git/)
 - [Git useful tips](https://ericdouglas.github.io/2016/04/01/Git-Useful-Tips/)
+- [Лучшая конфигурация Git](http://lambda-it.ru/posts/luchshaya-konfiguraciya-git/)
 
 Ветвление
 
