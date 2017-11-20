@@ -4,14 +4,17 @@
 # План на сегодня
 
 - инкрементирование
-- наборы данных
 - циклы
 - работа с файлами
 - синтаксический сахар
 
 # Операторы ин- и декремента
 
-`i += 1`     <==>         `i = i + 1`       <==>         `i++`
+![](http://devhumor.com/content/uploads/images/October2017/increment.jpg)
+
+Инкремент, инкрементирование (от англ. _increment_ «увеличение») — операция во многих языках программирования, увеличивающая переменную. Обратную операцию называют декремент (уменьшение).
+
+`i = i + 1`       <==>         `i += 1`     <==>         `i++`
 
 
 ```python
@@ -34,400 +37,78 @@ print(a)
     5
     25
     5
-
-
-# Наборы данных
-
-## Списки (Lists)
-
-Изменяемые наборы данных
-
-```python
-list_ = [ ]
-list_ = list()
-```
-
-
-
-```python
-x = ['zebra', 49, -879, 'aardvark', 200]
-```
-
-
-```python
-len(x)
-```
-
-
-
-
-    5
-
-
-
-
-```python
-x[0]
-```
-
-
-
-
-    'zebra'
-
-
-
-
-```python
-x[-1]
-```
-
-
-
-
-    200
-
-
-
-## Числовая последовательность
-
-```python
-range(START, STOP, STEP)
-```
-
-
-```python
-print(list(range(10)))
-
-print(list(range(1, 10)))
-
-print(list(range(1, 10, 2)))
-```
-
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    [1, 3, 5, 7, 9]
-
-
-Для того, чтобы развернуть последовательность в обратную сторону, используется функция `reversed()`
-
-
-```python
-list(reversed(range(10)))
-```
-
-
-
-
-    [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-
-
-
-## Слайсы / срезы / два ствола
-Общий вид
-```python
-list[START:STOP:STEP]
-```
-
-
-```python
-x[:]
-```
-
-
-
-
-    ['zebra', 49, -879, 'aardvark', 200]
-
-
-
-
-```python
-x[:-1]
-```
-
-
-
-
-    ['zebra', 49, -879, 'aardvark']
-
-
-
-
-```python
-x[1:-1]
-```
-
-
-
-
-    [49, -879, 'aardvark']
-
-
-
-
-```python
-x[::2]
-```
-
-
-
-
-    ['zebra', -879, 200]
-
-
-
-### Операции со списками
-```python
-lst.append(item) # добавить элемент в конец
-lst.extend(seq)  # добавить последовательность в конец
-lst.insert(idx,val) # вставить значение по индексу
-lst.remove(val)     # удалить первое вхождение val
-lst.pop(idx)        # удалить значение по индексу и вернуть его
-lst.sort() lst.reverse() # сортировать/обратить список по месту
-```
-
-
-```python
-x.append('datass')
-x
-```
-
-
-
-
-    ['zebra', 49, -879, 'aardvark', 200, 'datass']
-
-
-
-
-```python
-x.insert(1, 'face')
-x
-```
-
-
-
-
-    ['zebra', 'face', 49, -879, 'aardvark', 200, 'datass']
-
-
-
-
-```python
-last_val = x.pop(0)
-print(x, last_val)
-```
-
-    ['face', 49, -879, 'aardvark', 200, 'datass'] zebra
-
-
-
-```python
-a = [123, 4, 0, 44, 14, 2, 8]
-a.sort()
-a
-```
-
-
-
-
-    [0, 2, 4, 8, 14, 44, 123]
-
-
-
-Проверка на принадлежность списку
-
-
-```python
-'face' in x
-```
-
-
-
-
-    True
-
-
-
-
-```python
-'MADI' in x
-```
-
-
-
-
-    False
-
-
-
-### task
-
-Сколько элементов будет содержать список _students_ после следующих операций?
-
-```python
-students = ['Ivan', 'Masha', 'Sasha']
-students += ['Olga']
-students += 'Olga'
-```
-
-# 8
-
-![](http://risovach.ru/thumb/upload/200s400/2011/06/templ_1307805679_orig_Filosoraptor.jpg?b7jd5)
-
-## Кортежи (Tuples)
-
-Иммутабельны, т.е. неизменяемы.
-
-```python
-tuple_ = ()
-tuple_ = tuple()
-```
-
-
-
-```python
-tuple_ = ('Denmark', 'Finland', 'Norway', 'Sweden')
-```
-
-
-```python
-print("Длина кортежа - {0}".format(len(tuple_)))
-```
-
-    Длина кортежа - 4
-
-
-
-```python
-print(tuple_[0])
-```
-
-    Denmark
-
-
-
-```python
-print(tuple_[-1])
-```
-
-    Sweden
-
-
-Попытка изменить кортеж приведет к закономерному провалу, т.к. кортеж __неизменяем__
-
-
-```python
-tuple_.append('something')
-```
-
-
-    ---------------------------------------------------------------------------
-
-    AttributeError                            Traceback (most recent call last)
-
-    <ipython-input-22-f5f46c8f6eef> in <module>()
-    ----> 1 tuple_.append('something')
     
-
-    AttributeError: 'tuple' object has no attribute 'append'
-
-
-## Словари (Dictionaries)
-
-```python
-my_dict = {}
-my_dict = dict()
-
-my_dict = {'key':'value'}
-```
-
-
-```python
-MAI = {1:'авиастроение', 'инжэкин':5, 9:'прикладная механика'}
-```
-
-
-```python
-MAI.keys()
-```
-
-
-
-
-    dict_keys([1, 'инжэкин', 9])
-
-
-
-
-```python
-MAI.values()
-```
-
-
-
-
-    dict_values(['авиастроение', 5, 'прикладная механика'])
-
-
-
-
-```python
-MAI[1], MAI['инжэкин']
-```
-
-
-
-
-    ('авиастроение', 5)
-
-
-
-
-```python
-MAI_2 = {8: 'прикладная математика',
-         4: 'радиоэлектроника летательных аппаратов'}
-
-MAI.update(MAI_2)
-MAI
-```
-
-
-
-
-    {8: 'прикладная математика',
-     1: 'авиастроение',
-     4: 'радиоэлектроника летательных аппаратов',
-     'инжэкин': 5,
-     9: 'прикладная механика'}
-
-
 
 # Циклы
 
-## For
+> Цикл — разновидность управляющей конструкции, предназначенная для организации многократного исполнения набора инструкций.
+
+## For – Цикл со счётчиком
+
+Цикл со счётчиком — цикл, в котором некоторая переменная изменяет своё значение от заданного начального значения до конечного значения с некоторым шагом, и для каждого значения этой переменной тело цикла выполняется один раз.
 
 Общий вид:
 ```python
-for item in iterable:
+for counter in range(start, stop, step):
     expression
 ```
 
 
 ```python
+# пример
+for i in range(1,5):
+    print(i)
+```
+
+    1
+    2
+    3
+    4
+    
+
+Еще один вид циклов со счетчиками – [совместные циклы](https://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D0%BA%D0%BB_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)). Такой цикл задает выполнение некоторой операции для объектов из заданного множества, без явного указания порядка перечисления этих объектов. Такие циклы называются совместными (а также циклами по коллекции, циклами просмотра) и представляют собой формальную запись инструкции вида: «Выполнить операцию `X` для всех элементов, входящих во множество `M`».
+
+Общий вид:
+
+```python
+for item in iterable:
+    expression
+```
+Где `iterable` – итерируемый объект (коллекция). В роли такого объекта могут выступать строки (`str`), списки (`list`), кортежи (`tuple`), а также любой [класс, объявленный с методом `__iter__()`](https://docs.python.org/3/glossary.html#iterable) (об этом в других лекциях).
+
+
+```python
+# пример на списке
 MAI = ['я', 'мы', 'лучшие люди страны']
 
 for people in MAI:
-    print('МАИ - это {0}'.format(people))
+    print(f'МАИ - это {people}')
 ```
 
     МАИ - это я
     МАИ - это мы
     МАИ - это лучшие люди страны
+    
 
 
-можно итерироваться по строке
+```python
+# жуткие вещи, дальше объясняются
+list(map(lambda word: print(word), MAI))
+```
+
+    я
+    мы
+    лучшие люди страны
+    
+
+
+
+
+    [None, None, None]
+
+
+
+Можно итерироваться по строке
 
 
 ```python
@@ -444,21 +125,40 @@ for letter in 'long_word':
     o
     r
     d
+    
 
-
-также можно итерироваться по числовой последовательности
+Также можно итерироваться по числовой последовательности
 
 
 ```python
 for i in range(1, 5):
-    print('{0} muffins'.format(i))
+    print(f'{i} muffins')
 ```
 
     1 muffins
     2 muffins
     3 muffins
     4 muffins
+    
 
+Если хочется внутри цикла обращаться к элементам коллекции по их индексам, можно использовать следующую конструкцию:
+
+```python
+X = range(1, 100, 2)
+
+for i in range( len(X) ):
+    print( X[i] )
+```
+
+Что тут произошло?
+- X – список из некоторых данных
+- `len(X)` - функция, возвращающая длину списка
+- `range(len(X))` - создает коллекцию из индексов списка X
+- `X[i]` - обращение к i-тому элементу коллекции
+
+Такой метод итерации считается не очень красивым, логичным и не подходит под Python-way. Раз есть более элегантные способы итерации, то для поддержки читаемого кода рекомендуется использовать их.
+
+Команда `enumerate(list)` принимает в качестве аргумента коллекцию (список) и возвращает список кортежей, каждый из которых содержит индекс элемента и его содержимое. 
 
 
 ```python
@@ -472,6 +172,8 @@ list(enumerate(MAI))
 
 
 
+Итерация по одной переменной `people` в таком случае будет возвращать те самые кортежи:
+
 
 ```python
 for people in enumerate(MAI):
@@ -481,18 +183,22 @@ for people in enumerate(MAI):
     (0, 'я')
     (1, 'мы')
     (2, 'лучшие люди страны')
+    
 
+Если же надо "распаковать" кортежи, то можно перечислить итерируемые переменные через запятую:
 
 
 ```python
 for index, value in enumerate(MAI):
-        print('index = {0}, value = {1}'.format(index, value))
+        print(f'index = {index}, value = {value}')
 ```
 
     index = 0, value = я
     index = 1, value = мы
     index = 2, value = лучшие люди страны
+    
 
+Однако на практике, скорее всего захочется итерироваться по содержимому одновременно нескольких коллекций, например по списку фамилий студентов и групп, в которых они учатся (**важно** – коллекции должны иметь одинаковую размерность). Если мы просто перечислим желаемые коллекции через запятую, то интерпретатор нас не одобрит:
 
 
 ```python
@@ -507,15 +213,40 @@ for key, value in MAI.keys(), MAI.values():
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-34-f328d3f97fa9> in <module>()
+    <ipython-input-8-f328d3f97fa9> in <module>()
           1 MAI = {1:'авиастроение', 'инжэкин':5, 9:'прикладная механика'}
           2 
     ----> 3 for key, value in MAI.keys(), MAI.values():
           4     print('ключ "{0}"\t со значением "{1}"'.format(key, value))
-
+    
 
     ValueError: too many values to unpack (expected 2)
 
+
+Это связано с тем, что объект, по которому происходит итерация **должен быть один**.
+
+Что же делать?
+
+Здесь на помощь приходит команда `zip()`, которая "упаковывает" две коллекции в одну для совместной итерации.
+
+
+```python
+print(f"""
+    Ключи = { MAI.keys() },\n
+    Значения = { MAI.values() },\n
+    Вместе = { list(zip(MAI.keys(), MAI.values())) }
+    """
+)
+```
+
+    
+        Ключи = dict_keys([1, 'инжэкин', 9]),
+    
+        Значения = dict_values(['авиастроение', 5, 'прикладная механика']),
+    
+        Вместе = [(1, 'авиастроение'), ('инжэкин', 5), (9, 'прикладная механика')]
+        
+    
 
 
 ```python
@@ -526,11 +257,19 @@ for key, value in zip(MAI.keys(), MAI.values()):
     ключ "1"	 со значением "авиастроение"
     ключ "инжэкин"	 со значением "5"
     ключ "9"	 со значением "прикладная механика"
+    
 
+## While – Цикл с предусловием
 
-## While
+Цикл с предусловием — цикл, который выполняется, пока истинно некоторое условие, указанное перед его началом. Это условие проверяется **до** выполнения тела цикла, поэтому тело может быть не выполнено ни разу (если условие с самого начала ложно).
+
+```python
+while condition:
+    loop_body
+```
 
 Общий вид (аналог функции $\displaystyle s=\sum_{i=1}^{100} i^2$)
+
 
 ```python
 s = 0
@@ -539,6 +278,18 @@ i = 1
 while i <= 100:
     s += i**2
     i += 1
+
+print(s)
+```
+
+    338350
+    
+
+Вечный цикл
+
+```python
+while 1:
+    pass
 ```
 
 ### _task_
@@ -553,9 +304,15 @@ while i <= 10:
         i += 2
 ```
 
-__13__
+Ответ: __13__
 
 ## Операторы `break` и `continue`
+
+### `break` – Досрочный выход из цикла
+Команда досрочного выхода применяется, когда необходимо прервать выполнение цикла, в котором условие выхода ещё не достигнуто. Такое бывает, например, когда при выполнении тела цикла обнаруживается ошибка, после которой дальнейшая работа цикла не имеет смысла. Её действие аналогично действию команды безусловного перехода (`goto`) на команду, непосредственно следующую за циклом, внутри которого эта команда находится. Но так как использовать оператор `goto` – все равно, что поклоняться темным силам, в Python есть более элегантные способы выхода из цикла, которые будут рассмотрены позже.
+
+### `continue` – Пропуск итерации
+Данный оператор применяется, когда в текущей итерации цикла необходимо пропустить все команды до конца тела цикла. При этом сам цикл прерываться не должен, условия продолжения или выхода должны вычисляться обычным образом.
 
 ```python
 i = 0
@@ -572,38 +329,38 @@ while i < 20:
 ```python
 file = open('file.txt', 'w', encoding='utf8')
 ```
-1. имя файла на диске (+путь...)
+1. (абсолютный / относительный путь к файлу) + имя файла
 2. режим работы
-    - `r` - read
-    - `w` - write
-    - `a` - append
-3. кодировка символов в текстовых файлах: _utf8_, _ascii_, _cp1251_
+    - `r` - read (чтение)
+    - `w` - write (запись)
+    - `a` - append (добавление в конец)
+3. кодировка символов в текстовых файлах: _`utf8`_, _`ascii`_, _`cp1251`_
 
 
 ```python
-file = open('file.txt', 'w')
-file.write('hello\n')
-file.close()
+file = open('file.txt', 'w')  # открываем файл на запись
+file.write('hello\n')  # записываем некоторое содержимое
+file.close()  # закрываем файл (обязательно)
 
-file = open('file.txt', 'r')
-print(file.readline())
-file.close()
+file = open('file.txt', 'r')  # открываем файл на чтение
+print(file.readline())  # метод readline() читает одну строку
+file.close()  # закрываем файл
 ```
 
     hello
     
-
+    
 
 
 ```python
-file = open('file.txt', 'a')
-file.write('lorem ipsum\n')
-file.write('hello world\n')
-file.close()
+file = open('file.txt', 'a')  # открываем файл на добавление
+file.write('lorem ipsum\n')  # добавляем одну строку
+file.write('hello world\n')  # добавляем другую строку
+file.close()  # закрываем файл (обязательно)
 
-file = open('file.txt', 'r')
-line = file.read()
-file.close()
+file = open('file.txt', 'r')  # открываем файл на чтение
+line = file.read()  # метод read() читает файл полностью
+file.close()  # закрываем файл (обязательно)
 
 print(line)
 ```
@@ -612,11 +369,13 @@ print(line)
     lorem ipsum
     hello world
     
-
+    
 
 
 ```python
 file = open('file.txt', 'r')
+# целочисленный аргумент этого метода позволяет 
+# прочитать определенное количество символов
 line = file.read(10)
 file.close()
 
@@ -625,7 +384,14 @@ print(line)
 
     hello
     lore
+    
 
+Если хочется общаться с файлом подольше, можно открыть поток работы с ним через конструкцию
+
+```python
+with open() as text:
+    some_actions_w_text
+```
 
 
 ```python
@@ -648,11 +414,11 @@ with open('lambda.txt', 'r') as text:
     
     sunt in culpa qui officia deserunt mollit anim id est laborum.
     
-
+    
 
 ### task
 
-Вывести из файла lambda.txt слова, начинающиеся с букв `a` или `u`
+Скачать себе файлик [`lambda.txt`](https://raw.githubusercontent.com/lambdafrela/lambda-help/master/lectures/python/lecture_2/lambda.txt), открыть в той же директории интерпретатор Python. Вывести из файла lambda.txt слова, начинающиеся с букв `a` или `u`
 
 
 ```python
@@ -675,19 +441,30 @@ with open('lambda.txt', 'r') as text:
     aliquip
     aute
     anim
-
+    
 
 # Функциональное программирование
 
 ## Лямбда-выражения
 
+Они же анонимные функции, они же "О БОЖЕ, КАК Я ЭТО МОГ НАПИСАТЬ". Удобны для определения не очень сложных функций, которые передаются затем другим функциям.
+
 Общий вид:
 ```python
-lambda variable: expression_with_variable
+lambda variable_1, variable_2: expression_with_variables
 ```
+
+Конструкция выше является эквивалентной обычной функции:
+```python
+def my_func(variable_1, variable_2):
+    return expression_with_variables
+```
+
+Принцип анонимности выражается в нежелательности присваивания лямбда-выражениям именных меток. Объявил - использовал - забыл. Если функция должна применяться много раз _рекомендуется_ оформить её в классическую `def` конструкцию.
 
 
 ```python
+# объявления лямбда-выражения с моментальным применением
 (lambda x: x+2)(5)
 ```
 
@@ -698,40 +475,52 @@ lambda variable: expression_with_variable
 
 
 
-Для применения лямбда-функции к элементам списка используется команда `map()`
+Для применения лямбда-функции (а также любых других функций) к элементам списка используется команда `map()`
 
 Общий вид:
 ```python
-map(lambda variable: expression, iterable)
+map(lambda variable: expression_w_variable, iterable)
+```
+или, если задана функция `my_func`:
+```python
+map(my_func, iterable)
 ```
 
+Используется, когда ваще не хочется применять цикл `for` или результатом выполнения должна стать коллекция, передающаяся дальше в другие функции.
 
 
 ```python
-from __future__ import print_function
-
 MAI = ['я','мы','лучшие люди страны']
 
-print(list(map(lambda who: print('МАИ - это {0}'.format(who)), MAI)))
+list(map( lambda who: f'МАИ - это {who}', MAI ))
 ```
 
-    МАИ - это я
-    МАИ - это мы
-    МАИ - это лучшие люди страны
-    [None, None, None]
 
 
-страшный пример из реальной жизни
+
+    ['МАИ - это я', 'МАИ - это мы', 'МАИ - это лучшие люди страны']
+
+
+
+страшный пример из реальной жизни (пожалуйста, **никогда** не делайте так, если хотите использовать код в будущем)
 
 ```python
 sigmoid = lambda y: 1. / (1 + np.exp(-y))
 
-log_loss_from_staged_decision = lambda staged_decision, y: \
-    map(lambda pred: log_loss(y, pred), map(sigmoid, staged_decision))
+log_loss_from_staged_decision = lambda staged_decision, y: map(lambda pred: log_loss(y, pred), map(sigmoid, staged_decision))
     
-get_train_loss = lambda lr, X, y: \
-    log_loss_from_staged_decision(get_clf(lr).staged_decision_function(X), y)
+get_train_loss = lambda lr, X, y: log_loss_from_staged_decision(get_clf(lr).staged_decision_function(X), y)
+
+learning_rates = [1, 0.5, 0.3, 0.2, 0.1]
+
+train_losses = map(lambda lr: get_train_loss(lr, X_train, y_train), learning_rates)
+
+test_losses = map(lambda lr: get_train_loss(lr, X_test, y_test), learning_rates)
+
+map(plot_graphs, train_losses, test_losses, learning_rates)
 ```
+
+![y u no](https://i.ytimg.com/vi/Fr8itGELygc/hqdefault.jpg)
 
 ### task
 
@@ -742,6 +531,8 @@ data['Sex'] = data['Sex'].map(lambda x: 1 if x == 'M' else (-1 if x == 'F' else 
 ```
 
 ## Компоновки / списковые включения (Listing Comprehensions)
+
+Наиболее выразительное из функциональных средств Python. Например, для вычисления списка квадратов положительных целых чисел, меньших 10, можно написать обычную функцию:
 
 
 ```python
@@ -761,7 +552,9 @@ sqares(range(1, 10))
     49
     64
     81
+    
 
+а можно в одну строчку с помощью компоновок:
 
 
 ```python
@@ -793,14 +586,13 @@ list(map(lambda x: x**2, range(1,10)))
 
 # ДЗ
 
-1. [Парсер](https://github.com/lambdafrela/parser/issues/11) - по ссылке достаточно подробное описание того, что надо сделать, если останутся вопросы - ждем в [#python](http://lambdafrela.slack.com/)
 2. [Coding Bat Lists 1](http://codingbat.com/python/List-1) - задания на списки попроще
 3. [Coding Bat Lists 2](http://codingbat.com/python/List-2) - задания на списки посложнее
 
 ## в следующий раз
 
 - исключения
-- регулярные выражения
+- ПРАКТИЧЕСКОЕ ЗАНЯТИЕ
 
 # референс
 
